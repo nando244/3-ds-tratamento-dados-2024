@@ -1,4 +1,4 @@
-import { pegarCss } from "./comum.js";
+import { pegarCSS, configuraEixo} from "./comum.js";
 
 async function criarGraficoPizza() {
     const url = 'https://raw.githubusercontent.com/nando244/comida.json/refs/heads/main/outro.json'; // URL do JSON
@@ -16,23 +16,23 @@ async function criarGraficoPizza() {
             type: 'pie',
             marker: {
                 colors: [
-                    pegarCss(''), 
-                    pegarCss(''), 
-                    pegarCss('')
+                    pegarCSS(''), 
+                    pegarCSS(''), 
+                    pegarCSS('')
                 ] // Cores dos setores
             }
         }
     ];
 
     const layout = {
-        plot_bgcolor: pegarCss('--verde-médio'),
-        paper_bgcolor: pegarCss('--verde-médio'),
+        plot_bgcolor: pegarCSS('--verde-médio'),
+        paper_bgcolor: pegarCSS('--verde-médio'),
         title: {
-            text: 'Os Esportes Mais Praticados',
+            text: 'Os sabores mais consumidos',
             font: {
-                color: pegarCss('--branco'),
-                family: pegarCss('--fonte-titulo'),
-                size: 50
+                color: pegarCSS('--preto'),
+                family: pegarCSS('--fonte-titulo'),
+                size: 45
             }
         }
     };

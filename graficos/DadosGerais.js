@@ -1,10 +1,10 @@
-const url = 'https://raw.githubusercontent.com/nando244/comida.json/refs/heads/main/pastel.json'
+const url = 'https://raw.githubusercontent.com/nando244/comida.json/refs/heads/main/votos_pasteis'
 async function visualizarInfos() {
     const res = await fetch(url)
     const dados = await res.json()
-    const PastelMais = dados[0].pastel; // Corrigido para 'pastel'
-    const NumeroVotos = dados[0].votos;
-    const comentarios = dados[0].comentario;
+    const PastelMais = dados.votos_pasteis[0].pastel; // Corrigido para 'pastel'
+    const NumeroVotos = dados.votos_pasteis[0].votos;
+    const comentarios = dados.votos_pasteis[0].comentario;
     console.log(comentarios);
 
     const paragrafo = document.createElement("p");
